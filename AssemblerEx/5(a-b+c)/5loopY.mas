@@ -1,0 +1,38 @@
+﻿Input
+Store A
+Input
+Store B
+Input
+Store C
+
+Load Y
+Add A
+Store Y
+Subt B
+Store Y
+Add C
+Store Y
+
+loop, Load num
+Load sum
+    Add Y
+    Store sum
+    Load num
+    Subt one
+    store num
+    Skipcond 400
+    Jump loop
+Load sum
+Output
+Load num
+Output
+Halt
+
+
+B, DEC 0
+Y, DEC 0
+C, DEC 0
+A, DEC 0
+one, DEC 1
+num, Dec 5
+sum, Dec 0

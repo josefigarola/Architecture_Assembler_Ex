@@ -1,0 +1,46 @@
+﻿LOOP, Load NUM
+/ increment value
+/ output
+LoadI PTR
+Add CTR
+StoreI PTR
+Output
+
+/ increment pointer
+Load PTR
+Add ONE
+Store PTR
+
+/ increment counter
+Load CTR
+Add ONE
+Store CTR
+
+/ Restar ciclo
+Load NUM
+Subt ONE
+Store NUM
+
+/ check loop cycle
+Skipcond 400
+Jump LOOP
+Halt
+
+
+ONE, DEC 1
+CTR, DEC 1
+NUM, DEC 5
+C, DEC 5
+
+/ initialize pointer to words
+PTR, ADR SEC /Primer secuencia
+
+/ Sequence
+SEC, HEX 0
+HEX 1
+HEX 2
+HEX 3
+HEX 4
+
+
+

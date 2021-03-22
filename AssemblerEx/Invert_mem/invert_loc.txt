@@ -1,0 +1,79 @@
+/ Invertir localidades de memoria
+
+LOOP, Clear
+/ output "word"
+LoadI PTR
+StoreI TEMP
+Output
+
+/ increment pointer
+Load PTR
+Add ONE
+Store PTR
+Load TEMP
+Add ONE
+Store TEMP
+
+/ increment counter
+Load CTR
+Add ONE
+Store CTR
+
+/ check whether all words have been processed and halt if so
+Subt WORDS
+Skipcond 400
+Jump LOOP
+
+/Inicia el proceso de invertir
+Clear
+Store CTR
+Load TEMP
+Subt ONE
+Store TEMP
+LOOP2, Clear 
+/ output world!
+LoadI TEMP
+StoreI SPTR
+Output
+
+/ increment pointer
+Load SPTR
+Add ONE
+Store SPTR
+Load TEMP
+Subt ONE
+Store TEMP
+
+/ increment counter
+Load CTR
+Add ONE
+Store CTR
+
+/ check whether all words have been processed and halt if so
+Subt WORDS
+Skipcond 400
+Jump LOOP2
+Halt
+
+ONE, DEC 1
+CTR, DEC 0
+WORDS, DEC 4
+
+/ initialize pointer to words
+PTR, ADR S
+SPTR, ADR S
+TEMP, ADR DIRTEMP
+
+/ ouput data
+/ "Word"
+S, HEX 57
+HEX 4F
+HEX 52
+HEX 44
+
+DIRTEMP, DEC 0
+DEC 0
+DEC 0
+DEC 0
+
+

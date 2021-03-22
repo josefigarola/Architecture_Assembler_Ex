@@ -1,0 +1,32 @@
+﻿Load Addr /Load addres of first numer to be added
+Store Next /Store this addres as our next pointer
+Load Num /Load the number of items to be added
+Subt One /Decrement
+Store Ctr /Store this value in Ctr to control looping
+loop, load Sum /Load de Sum into AC
+AddI Next /Add the value pointed to by location Next
+Store Sum /Store this sum
+Load Next /Load Next
+Add One /Increment by one to point to next addres
+Store Next /Store in our pointer Next
+Load Ctr /Load the loop control variable
+Subt One /Subtract one from the loop control variable
+Store Ctr /Store this new value in loop control variable
+Skipcond 000 /If control variable < 0, skip next
+			 /Instruction
+Jump loop /Otherwise go to loop
+Halt /Terminate program
+
+Addr, Hex 117 /Number to be summed start at location 117
+Next, Hex 0 /A pointer to the next number to add
+Num, DEC 5 /The number o values to add
+Sum, DEC 0 /The sum
+Ctr, Hex 0 /The loop control variable
+One, DEC 1 /Use to increment and decrement 1
+DEC 10
+DEC 15
+DEC 20 
+DEC 25
+DEC 30
+
+

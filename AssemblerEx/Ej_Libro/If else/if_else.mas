@@ -1,0 +1,18 @@
+﻿/If & Else condition
+Load X /Load the first value
+Subt Y /Load the second value
+Skipcond 400 /If Ac = 0, skip the next instruction
+Jump Else /Jump to Else part if AC is not = 0
+Then, Load X /Reload X so it can be doubled
+Add X /double X
+Store X /Store the new value
+Output
+Jump Endif /Skip over the false, or else, part to end if
+Else, Load Y /Start the else part by loading Y
+Subt X /Subtract X from Y
+Store Y /Store Y-X in Y
+Output
+Endif, Halt /Terminate program 
+
+X, DEC 30 /The value of X
+Y, DEC 30 /The value of Y

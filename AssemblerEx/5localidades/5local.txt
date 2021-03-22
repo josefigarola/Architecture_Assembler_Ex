@@ -1,0 +1,45 @@
+﻿Load inf
+Store i
+
+Ini, Load i
+Subt sup
+Skipcond 000
+Jump End
+Load i
+Add ONE
+Store i
+
+Load PTR
+Add ONE
+Store current
+
+/Siguiente localidad de mememoria
+Load PTR
+Add ONE
+Store PTR
+
+Load current
+StoreI PTR
+
+Jump Ini
+End, Halt
+
+/Variables
+inf, DEC 0
+sup, DEC 6
+i, DEC 0
+
+ONE, DEC 1
+current, HEX 0
+
+/Inicializar el puntero
+PTR, ADR SEC
+
+/5 Localidades
+SEC, HEX 5
+HEX 0
+HEX 0
+HEX 0
+HEX 0
+HEX 0
+    

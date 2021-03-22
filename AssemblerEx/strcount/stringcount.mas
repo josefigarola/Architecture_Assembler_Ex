@@ -1,0 +1,38 @@
+﻿LOOP, Load PTR
+LoadI PTR
+
+
+/ increment pointer
+Load PTR
+Add ONE
+Store PTR
+
+/ increment counter
+Load CTR
+Add ONE
+Store CTR
+
+/ check whether all words have been processed and halt if so
+LoadI PTR
+Skipcond 400
+Jump LOOP
+Load CTR
+Output
+
+Halt
+
+ONE, DEC 1
+CTR, DEC 0
+WORDS, DEC 12
+
+/ initialize pointer to words
+PTR, ADR S
+
+/ ouput data
+/ "Miguel"
+S, HEX 4D
+HEX 69
+HEX 67
+HEX 75
+HEX 65
+HEX 6C

@@ -1,0 +1,70 @@
+﻿Input
+Store X
+Input
+Store A
+Input
+Store B
+Input
+Store C
+
+loop, Load num1
+Load sum1
+    Add A
+    Store sum1
+    Load num1
+    Subt one
+    store num1
+    Skipcond 400
+    Jump loop
+Load sum1
+
+loop2, Load num2
+Load sum2
+    Add B
+    Store sum2
+    Load num2
+    Subt one
+    store num2
+    Skipcond 400
+    Jump loop2
+Load sum2
+
+loop3, Load num3
+Load sum3
+    Add C
+    Store sum3
+    Load num3
+    Subt one
+    store num3
+    Skipcond 400
+    Jump loop3
+Load sum3
+
+Load Y
+Add X
+Store Y
+Load Y
+Subt  sum1
+Store Y
+Subt  sum2
+Store Y
+Subt sum3
+Store Y
+
+Load Y
+Output
+Halt
+
+
+B, DEC 0
+Y, DEC 0
+C, DEC 0
+A, DEC 0
+X, DEC 0
+one, DEC 1
+num1, Dec 2
+num2, Dec 3
+num3, Dec 4
+sum1, Dec 0
+sum2, Dec 0
+sum3, dec 0
